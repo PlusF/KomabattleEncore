@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 
 const FlexContainer = styled.div`
   display: flex;
@@ -9,9 +8,10 @@ const FlexContainer = styled.div`
   max-width: 800px;
   margin-top: 3rem;
 `
-
-const Card = styled.div`
+const StyledLink = styled.a`
   padding: 1.5rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
   color: inherit;
   text-decoration: none;
   border: 1px solid black;
@@ -27,23 +27,16 @@ const Card = styled.div`
   }
 `
 
-const StyledA = styled.a`
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-`
-
-const StyledLink = ({ href, name }) => (
-  <Link href={href} passHref legacyBehavior>
-    <StyledA>{name}</StyledA>
-  </Link>
+const LinkCard = ({ href, name }) => (
+  <StyledLink href={href}>{name}</StyledLink>
 )
 
-export default function Cards() {
+export default function PageCards() {
   return (
     <FlexContainer>
-      <Card>
-        <StyledLink href="/about" name="About Page &rarr;" />
-      </Card>
+      <LinkCard href='https://docs.google.com/forms/d/e/1FAIpQLSf5foCcm52s-XhBe-ll9ExVveJhrYQ7BSl23RDWt9EXt4hrnA/viewform?usp=sharing' name='Entry &rarr;' />
+      <LinkCard href='/entrylist' name='Entry List &rarr;' />
+      <LinkCard href="/battle" name="Battle Tournament &rarr;" />
     </FlexContainer>
   )
 }

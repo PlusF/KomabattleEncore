@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Lato, Noto_Sans_JP, Cinzel_Decorative, Zen_Kaku_Gothic_Antique } from 'next/font/google'
 
 const Container = styled.div`
   padding: 0 0.5rem;
@@ -7,10 +8,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: 100vh;
+  min-height: 150vh;
 `
 const Main = styled.main`
-  padding: 5rem 0;
+  padding: 0rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -41,14 +42,31 @@ const Description = styled.p`
   line-height: 1.5;
   font-size: 1.5rem;
 `
-const CodeTag = styled.code`
-  background: #fafafa;
-  border-radius: 5px;
-  margin: 0 0.75rem;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+
+const Detail = styled.p`
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.2rem;
 `
 
-export { Container, Main, Title, Description, CodeTag }
+const Lato700 = Lato({
+  weight: '700',
+  preload: false,
+})
+
+const NotoSansJP300 = Noto_Sans_JP({
+  weight: '300',
+  preload: false,
+})
+
+const CinzelDecorative400 = Cinzel_Decorative({
+  weight: '400',
+  preload: false,
+})
+
+const ZenKakuGothicAntique400 = Zen_Kaku_Gothic_Antique({
+  weight: '400',
+  preload: false,
+})
+
+export { Container, Main, Title, Description, Detail, Lato700, NotoSansJP300, CinzelDecorative400, ZenKakuGothicAntique400 }
