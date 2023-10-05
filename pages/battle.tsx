@@ -50,7 +50,6 @@ const TournamentBracket = ( { dancers }: { dancers: Content[] } ) => {
 };
 
 export default function Battle({ dancers }: { dancers: Content[] }) {
-    console.log('loaded');
   return (
     <Container>
       <Main>
