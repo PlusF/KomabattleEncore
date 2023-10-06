@@ -1,25 +1,23 @@
 import type { AppProps } from 'next/app'
-import { ThemeProvider, DefaultTheme } from 'styled-components'
-import GlobalStyle from '../components/globalstyles'
-import Header from '../components/header'
+import { Center, ChakraProvider, VStack } from '@chakra-ui/react'
+import { theme } from '../components/globalstyles'
+import { Header } from '../components/header'
 import Footer from '../components/footer'
-
-const theme: DefaultTheme = {
-  colors: {
-    primary: '#111',
-    secondary: '#0070f3',
-  },
-}
+import '@fontsource/cinzel-decorative'
+import '@fontsource/roboto'
+import '@fontsource/noto-sans-jp'
+import '@fontsource/zen-kaku-gothic-antique'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </ThemeProvider>
-    </>
-  )
+    return (
+        <ChakraProvider theme={theme}>
+            <Header />
+                <Center>
+                    <VStack>
+                        <Component {...pageProps} />
+                    </VStack>
+                </Center>
+            <Footer />
+        </ChakraProvider>
+    )
 }

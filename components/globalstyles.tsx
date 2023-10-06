@@ -1,23 +1,24 @@
-import { createGlobalStyle } from 'styled-components'
+import { extendTheme } from '@chakra-ui/react'
 
-const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    color: ${({ theme }) => theme.colors.primary};
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  }
+const theme = extendTheme({
+    fonts: {
+        heading: `'Cinzel Decorative'`,
+        body: `'Roboto'`,
+    },
+    components: {
+        Heading: {
+            baseStyle: {
+                fontFamily: `'Cinzel Decorative'`,
+                padding: '3rem 0',
+                textAlign: 'center',
+            },
+        },
+        Text: {
+            baseStyle: {
+                fontFamily: `'Noto Sans JP'`,
+            },
+        }
+    }
+})
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-`
-
-export default GlobalStyle
+export { theme }

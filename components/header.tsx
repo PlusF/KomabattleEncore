@@ -1,33 +1,26 @@
 import Link from "next/link";
-import styled from "styled-components";
-import { CinzelDecorative400 } from "./sharedstyles";
+import { Box, Heading } from "@chakra-ui/react";
 
-const StyledHeader = styled.header`
-    font-size: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    height: 5rem;
-    background-color: #111;
-    color: #fff;
-`;
-
-const StyledP = styled.p`
-    font-size: 2rem;
-`;
-
-export default function Header() {
-    return (
-        <StyledHeader>
-            <Link href='/'>
-                <StyledP className={CinzelDecorative400.className}>
-                    KOMABATTLE Encore
-                </StyledP>
-            </Link>
-        </StyledHeader>
-    );
+const boxStyle = {
+    backgroundColor: '#111',
+    textAlign: 'center',
 }
+
+const logoStyle = {
+    fontSize: '1.2rem',
+    fontWeight: '400',
+    color: '#fff',
+    padding: '1.5rem',
+}
+
+function Header() {
+    return (
+        <Box sx={boxStyle}>
+            <Link href='/'>
+                <Heading sx={logoStyle}>KOMABATTLE Encore</Heading>
+            </Link>
+        </Box>
+    )
+}
+
+export { Header }

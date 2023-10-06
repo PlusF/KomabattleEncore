@@ -1,22 +1,28 @@
 
 import { getContents } from '../lib/spreadsheet';
-import { Content } from '../lib/content';
-import { FlexContainer, EntryCard } from '../components/entries';
+import { Dancer } from '../lib/dancer';
+import {
+    Container, Heading,
+} from '@chakra-ui/react';
+import { EntryCard } from '../components/entrycard';
 
-export default function EntryList({ dancers }: { dancers: Content[] }) {
+export default function EntryList({ dancers }: { dancers: Dancer[] }) {
     return (
-        <FlexContainer>
-            {dancers.map((dancer) => (
-                <EntryCard key={dancer.name} dancer={dancer} />
-            ))}
-        </FlexContainer>
+        <>
+        <Heading>Entry List</Heading>
+            <Container>
+                {dancers.map((dancer) => (
+                    <EntryCard dancer={dancer} />
+                ))}
+            </Container>
+        </>
     );
 }
 
 export async function getStaticProps() {
     const dancers = await getContents();
     return {
-      props: { dancers },
-      revalidate: 3600,
+        props: { dancers },
+        revalidate: 3600,
     };
 }
