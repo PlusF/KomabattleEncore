@@ -21,6 +21,12 @@ function Description() {
             <Text>
                 2023年はOBG Edition 「KOMABATTLE Encore」を開催します。
             </Text>
+            <Text>
+                現役からOBGまで、WISHかBOILEDに所属している/していた方なら誰でもエントリー可能。
+            </Text>
+            <Text>
+                広い世代からのエントリーをお待ちしています。
+            </Text>
         </VStack>
     )
 }

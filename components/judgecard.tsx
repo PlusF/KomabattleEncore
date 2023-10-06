@@ -74,14 +74,14 @@ function JudgeCard(props: { judge: Judge }) {
 function Judges() {
     const judges: Judge[] = [
         {
-            name: '軍犬Z',
+            name: '軍犬ZERO',
             src: 'tmp.jpg',
             description: 'Mighty Beat Bation/Free Front'
         },
         {
             name: 'shishiyo is green',
             src: 'judge2.jpg',
-            description: ''
+            description: 'お誕生日研究会'
         },
         {
             name: 'Amazon',

@@ -15,7 +15,6 @@
     "@fontsource/roboto": "^5.0.8",
     "@fontsource/zen-kaku-gothic-antique": "^5.0.13",
     "@fontsource/zen-old-mincho": "^5.0.7",
-    "@next/font": "^13.5.4",
     "framer-motion": "^10.16.4",
     "fs": "^0.0.1-security",
     "googleapis": "^126.0.1",
