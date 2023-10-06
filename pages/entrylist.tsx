@@ -8,10 +8,21 @@ import {
 } from '@chakra-ui/react';
 import { EntryCard } from '../components/entrycard';
 
+const textStyle = {
+    fontSize: {
+        base: '0.7rem',
+        md: '0.9rem'
+    },
+    fontWeight: '400',
+}
+
 export default function EntryList({ dancers }: { dancers: Dancer[] }) {
     return (
         <>
-        <Heading>Entry List</Heading>
+        <Heading>
+            Entry List
+            <Text sx={textStyle}>リストへの反映には最大1時間かかります</Text>
+        </Heading>
             <Container>
                 {dancers.map((dancer, i) => (
                     <HStack key={i}>
