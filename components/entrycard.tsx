@@ -70,7 +70,7 @@ const cardBodyTextStyle = {
 
 function EntryCard({dancer}: {dancer: Dancer}) {
     return (
-        <Card key={dancer.name} sx={cardStyle}>
+        <Card sx={cardStyle}>
         <HStack>
             <CardHeader sx={cardHeaderStyle}>
                 <Text sx={dancerNameStyle} noOfLines={1}>{dancer.name}</Text>

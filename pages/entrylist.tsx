@@ -25,12 +25,20 @@ export default function EntryList({ dancers }: { dancers: Dancer[] }) {
         genre: 'test, test, test, test',
         canceled: false,
     })
+    dancers.push({
+        name: 'test',
+        rep: '',
+        circle: 'BOILED',
+        grade: '11',
+        genre: 'test, test, test, test',
+        canceled: true,
+    })
     return (
         <>
         <Heading>Entry List</Heading>
             <Container>
                 {dancers.map((dancer, i) => (
-                    <HStack>
+                    <HStack key={i}>
                         <Text>{i}</Text>
                         <EntryCard dancer={dancer} />
                     </HStack>
