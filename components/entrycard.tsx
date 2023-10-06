@@ -7,6 +7,7 @@ import {
     Text
 } from '@chakra-ui/react'
 import { Dancer } from '../lib/dancer'
+import { Canceled } from './canceled'
 import { theme } from './globalstyles'
 
 const cardStyle = {
@@ -71,16 +72,17 @@ const cardBodyTextStyle = {
 function EntryCard({dancer}: {dancer: Dancer}) {
     return (
         <Card sx={cardStyle}>
-        <HStack>
-            <CardHeader sx={cardHeaderStyle}>
-                <Text sx={dancerNameStyle} noOfLines={1}>{dancer.name}</Text>
-                <Text sx={repStyle} noOfLines={1}>{dancer.rep}</Text>
-            </CardHeader>
-            <Spacer />
-            <CardBody sx={cardBodyStyle}>
-                <Text sx={cardBodyTextStyle}>{dancer.circle} {dancer.grade}</Text>
-            </CardBody>
-        </HStack>
+            {dancer.canceled ? <Canceled /> : <></>}
+            <HStack>
+                <CardHeader sx={cardHeaderStyle}>
+                    <Text sx={dancerNameStyle} noOfLines={1}>{dancer.name}</Text>
+                    <Text sx={repStyle} noOfLines={1}>{dancer.rep}</Text>
+                </CardHeader>
+                <Spacer />
+                <CardBody sx={cardBodyStyle}>
+                    <Text sx={cardBodyTextStyle}>{dancer.circle} {dancer.grade}</Text>
+                </CardBody>
+            </HStack>
         </Card>
     )
 }
