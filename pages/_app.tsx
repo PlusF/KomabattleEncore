@@ -7,6 +7,7 @@ import '@fontsource/cinzel-decorative'
 import '@fontsource/roboto'
 import '@fontsource/noto-sans-jp'
 import '@fontsource/zen-kaku-gothic-antique'
+import '@fontsource/zen-old-mincho'
 
 export default function App({ Component, pageProps }: AppProps) {
     return (

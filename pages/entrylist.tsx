@@ -1,8 +1,8 @@
-
 import { getContents } from '../lib/spreadsheet';
 import { Dancer } from '../lib/dancer';
 import {
-    Container, Heading,
+    Container, 
+    Heading,
 } from '@chakra-ui/react';
 import { EntryCard } from '../components/entrycard';
 

@@ -1,8 +1,7 @@
 import { 
     Card, 
     CardBody, 
-    CardHeader, 
-    Heading, 
+    CardHeader,
     HStack, 
     Spacer, 
     Text

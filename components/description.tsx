@@ -1,4 +1,7 @@
-import { Text, VStack } from "@chakra-ui/react";
+import { 
+    Text, 
+    VStack 
+} from "@chakra-ui/react";
 
 const vstackStyle = {
     fontSize: {

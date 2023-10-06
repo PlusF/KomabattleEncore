@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { Box, Heading } from "@chakra-ui/react";
+import { 
+    Box, 
+    Heading 
+} from "@chakra-ui/react";
 
 const boxStyle = {
     backgroundColor: '#111',

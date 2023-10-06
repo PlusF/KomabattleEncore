@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import {
     Box,
-    Center,
     Heading,
-    VStack,
 } from '@chakra-ui/react'
 import { LinkCard } from '../components/linkcard'
 import { Description } from '../components/description'
 import { Detail } from '../components/detail'
+import { Judges } from '../components/judgecard'
 
 export default function Home() {
 return (
@@ -25,6 +24,8 @@ return (
 
     <Description />
     <Detail />
+
+    <Judges />
 
     <Box>
         <LinkCard href='https://docs.google.com/forms/d/e/1FAIpQLSf5foCcm52s-XhBe-ll9ExVveJhrYQ7BSl23RDWt9EXt4hrnA/viewform?usp=sharing' name='Entry' isExternal />

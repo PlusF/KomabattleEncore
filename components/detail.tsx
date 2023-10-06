@@ -1,4 +1,7 @@
-import { Text, VStack } from "@chakra-ui/react"
+import { 
+    Text, 
+    VStack 
+} from "@chakra-ui/react"
 
 const vstackStyle = {
     fontSize: '0.9rem',
@@ -17,6 +20,9 @@ function Detail() {
             </Text>
             <Text>
                 1on1 フルトーナメント
+            </Text>
+            <Text>
+                エントリー ￥1,500 / 観戦 無料
             </Text>
         </VStack>
     )
