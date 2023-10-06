@@ -4,6 +4,7 @@ const theme = extendTheme({
     fonts: {
         heading: `'Cinzel Decorative'`,
         body: `'Roboto'`,
+        name: `'Zen Old Mincho'`,
     },
     components: {
         Heading: {

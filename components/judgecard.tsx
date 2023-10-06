@@ -6,6 +6,7 @@ import {
     Text,
     Heading,
 } from "@chakra-ui/react";
+import { theme } from "./globalstyles";
 
 type Judge = {
     name: string;
@@ -47,7 +48,7 @@ const nameStyle = {
         base: '0.8rem',
         md: '1rem'
     },
-    fontFamily: 'Zen Old Mincho',
+    fontFamily: theme.fonts.name,
     fontWeight: '400',
     textAlign: 'center',
 }

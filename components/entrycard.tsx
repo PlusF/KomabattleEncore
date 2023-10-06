@@ -10,34 +10,61 @@ import { Dancer } from '../lib/dancer'
 import { theme } from './globalstyles'
 
 const cardStyle = {
-    margin: '1rem 0',
+    margin: {
+        base: '0.6rem',
+        md: '1rem'
+    },
     backgroundColor: '#222',
     color: '#fff',
-    padding: '1.2rem'
+    padding: {
+        base: '0.4rem',
+        md: '0.8rem',
+    }
 }
 
 const cardHeaderStyle = {
     textAlign: 'left',
-    padding: '1.2rem 1.5rem',
-    width: '16rem',
+    width: {
+        base: '8rem',
+        md: '12rem',
+    },
+    padding: {
+        base: '0.2rem 0.3rem',
+        md: '0 0.5rem',
+    }
 }
 
 const dancerNameStyle = {
-    fontFamily: theme.fonts.heading,
-    fontSize: '1.5rem',
+    fontFamily: theme.fonts.name,
+    fontSize: {
+        base: '1rem',
+        md: '1.2rem',
+    },
     fontWeight: '400',
+    padding: '0',
+    margin: '0',
+}
+
+const repStyle = {
+    fontSize: {
+        base: '0.5rem',
+        md: '0.8rem'
+    },
+    fontWeight: '200',
 }
 
 const cardBodyStyle = {
     textAlign: 'right',
-    padding: '1.2rem 1.5rem',
-    display: 'flex',
-    alignItems: 'flex-end',
 }
 
 const cardBodyTextStyle = {
+    fontSize: {
+        base: '0.6rem',
+        md: '0.8rem',
+    },
     width: {
-        base: '5rem',
+        base: '4rem',
+        md: '6rem',
     }
 }
 
@@ -46,8 +73,8 @@ function EntryCard({dancer}: {dancer: Dancer}) {
         <Card key={dancer.name} sx={cardStyle}>
         <HStack>
             <CardHeader sx={cardHeaderStyle}>
-                <Text sx={dancerNameStyle}>{dancer.name}</Text>
-                <Text>{dancer.rep}</Text>
+                <Text sx={dancerNameStyle} noOfLines={1}>{dancer.name}</Text>
+                <Text sx={repStyle} noOfLines={1}>{dancer.rep}</Text>
             </CardHeader>
             <Spacer />
             <CardBody sx={cardBodyStyle}>
