@@ -14,23 +14,27 @@ const getSheets = () => {
 };
 
 export const getContents = async (): Promise<Dancer[]> => {
-    const sheets = getSheets();
-    const response = await sheets.spreadsheets.values.get({
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'entrylist',
-    });
-    const rows = response.data.values;
-    if (rows) {
-        return rows.slice(1).map((row): Dancer => {
-            return {
-                circle: row[1],
-                grade: row[2],
-                genre: row[3],
-                name: row[4],
-                rep: row[5],
-                canceled: Boolean(row[6]),
-            };
+    try {
+        const sheets = getSheets();
+        const response = await sheets.spreadsheets.values.get({
+            spreadsheetId: process.env.SPREADSHEET_ID,
+            range: 'entrylist',
         });
+        const rows = response.data.values;
+        if (rows) {
+            return rows.slice(1).map((row): Dancer => {
+                return {
+                    circle: row[1],
+                    grade: row[2],
+                    genre: row[3],
+                    name: row[4],
+                    rep: row[5],
+                    canceled: Boolean(row[6]),
+                };
+            });
+        }
+    } catch (err) {
+        console.error(err);
     }
     return [];
 };
