@@ -18,6 +18,6 @@ export async function getStaticProps() {
     const dancers = await getContents();
     return {
         props: { dancers },
-        revalidate: 3600,
+        revalidate: 10,
     };
 }
