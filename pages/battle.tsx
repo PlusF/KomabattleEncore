@@ -36,7 +36,7 @@ export default function Battle({ battle }: { battle: Battle }) {
 export async function getStaticProps() {
     const battle = await getBattle();
     return {
-        props: { battle } || null,
+        props: battle? { battle } : {},
         revalidate: 10,
     };
 }
