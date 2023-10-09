@@ -102,6 +102,6 @@ export const getBattle = async (): Promise<Battle> => {
         quarter: [],
         semi: [],
         final: [],
-        winner: [],
+        winner: [{name: '???'}],
     };
 };
