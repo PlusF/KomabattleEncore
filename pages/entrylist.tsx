@@ -1,4 +1,4 @@
-import { getContents } from '../lib/spreadsheet';
+import { getEntryList } from '../lib/spreadsheet';
 import { Dancer } from '../lib/dancer';
 import {
     Container, 
@@ -22,7 +22,7 @@ export default function EntryList({ dancers }: { dancers: Dancer[] }) {
         <>
         <Heading>
             Entry List
-            <Text sx={textStyle}>リストへの反映には最大1時間かかります</Text>
+            <Text sx={textStyle}>リストへの反映には最大1分かかります</Text>
         </Heading>
             <Container>
                 {dancers.map((dancer, i) => (
@@ -38,9 +38,9 @@ export default function EntryList({ dancers }: { dancers: Dancer[] }) {
 }
 
 export async function getStaticProps() {
-    const dancers = await getContents();
+    const dancers = await getEntryList();
     return {
         props: { dancers },
-        revalidate: 3600,
+        revalidate: 60,
     };
 }

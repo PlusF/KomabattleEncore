@@ -1,19 +1,7 @@
-import { Dancer } from '../lib/dancer';
+import { Battle } from '../lib/dancer';
 import { Button, Text } from '@chakra-ui/react';
 
-const Tournament = ({ dancers }: { dancers: Dancer[] }) => {
-    dancers = [];
-    for (let i = 0; i < 64; i++) {
-        const d = {
-            circle: '',
-            grade: '',
-            genre: '',
-            name: '',
-            rep: '',
-            canceled: false,
-        }
-        dancers.push(d);
-    }
+const Tournament = ({ battle }: { battle: Battle }) => {
     const tmp32 = [];
     for (let i = 0; i < 32; i++) {
         tmp32.push(i);
@@ -23,9 +11,9 @@ const Tournament = ({ dancers }: { dancers: Dancer[] }) => {
             <div id='tournament-container-1'>
 
                 <section className='tournament-round'>
-                    {dancers.map((dancer, index) => {
+                    {battle.first.map((dancerName, index) => {
                         return (
-                            <div className='player-box' key={index}>{dancer.name}</div>
+                            <div className='player-box' key={index}>{dancerName.name}</div>
                         )
                     })}
                 </section>
@@ -47,9 +35,9 @@ const Tournament = ({ dancers }: { dancers: Dancer[] }) => {
                 </div>
                 
                 <section className='tournament-round' id="secondRound">
-                    {tmp32.map((i) => {
+                    {battle.second.map((dancerName, i) => {
                         return (
-                            <div className='player-box' key={i}></div>
+                            <div className='player-box' key={i}>{dancerName.name}</div>
                         )
                     })}
                 </section>
@@ -69,9 +57,9 @@ const Tournament = ({ dancers }: { dancers: Dancer[] }) => {
                 </div>
                 
                 <section className='tournament-round' id="thirdRound">
-                    {tmp32.slice(0,16).map((i) => {
+                    {battle.third.map((dancerName, i) => {
                         return (
-                            <div className='player-box' key={i}></div>
+                            <div className='player-box' key={i}>{dancerName.name}</div>
                     )})}
                 </section>
                 
@@ -101,12 +89,12 @@ const Tournament = ({ dancers }: { dancers: Dancer[] }) => {
     )
 }
 
-function First2third({dancers, setState}: {dancers: Dancer[], setState: (state: number) => void}) {
+function First2third({battle, setState}: {battle: Battle, setState: (state: number) => void}) {
     return (
         <>
         <Text>1st Round ~ 3rd Round</Text>
         <Button onClick={() => setState(0)} sx={{background: '#ffffffff', fontFamily: 'Noto Sans JP', fontWeight: 400, width: 120}}>&larr; Go back</Button>
-        <Tournament dancers={dancers} />
+        <Tournament battle={battle} />
         </>
     )
 }
