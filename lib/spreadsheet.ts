@@ -40,6 +40,13 @@ export const getEntryList = async (): Promise<Dancer[]> => {
 };
 
 export const getBattle = async (): Promise<Battle> => {
+    let first = new Array<DancerName>(64).fill({ name: '' });
+    let second = new Array<DancerName>(32).fill({ name: '' });
+    let third = new Array<DancerName>(16).fill({ name: '' });
+    let quarter = new Array<DancerName>(8).fill({ name: '' });
+    let semi = new Array<DancerName>(4).fill({ name: '' });
+    let final = new Array<DancerName>(2).fill({ name: '' });
+    let winner = new Array<DancerName>(1).fill({ name: '' });
     try {
         const sheets = getSheets();
         const response = await sheets.spreadsheets.values.get({
@@ -47,13 +54,6 @@ export const getBattle = async (): Promise<Battle> => {
             range: 'battle',
         });
         const rows = response.data.values;
-        let first = new Array<DancerName>(64).fill({ name: '' });
-        let second = new Array<DancerName>(32).fill({ name: '' });
-        let third = new Array<DancerName>(16).fill({ name: '' });
-        let quarter = new Array<DancerName>(8).fill({ name: '' });
-        let semi = new Array<DancerName>(4).fill({ name: '' });
-        let final = new Array<DancerName>(2).fill({ name: '' });
-        let winner = new Array<DancerName>(1).fill({ name: '' });
         if (rows) {
             rows.forEach((row, i) => {
                 if (i === 0) {
@@ -96,12 +96,12 @@ export const getBattle = async (): Promise<Battle> => {
         console.error(err);
     }
     return {
-        first: null,
-        second: null,
-        third: null,
-        quarter: null,
-        semi: null,
-        final: null,
-        winner: [{name: '???'}],
+        first: first,
+        second: second,
+        third: third,
+        quarter: quarter,
+        semi: semi,
+        final: final,
+        winner: winner,
     };
 };
