@@ -47,13 +47,13 @@ export const getBattle = async (): Promise<Battle> => {
             range: 'battle',
         });
         const rows = response.data.values;
-        let first = [];
-        let second = [];
-        let third = [];
-        let quarter = [];
-        let semi = [];
-        let final = [];
-        let winner = [];
+        let first = new Array<DancerName>(64).fill({ name: '' });
+        let second = new Array<DancerName>(32).fill({ name: '' });
+        let third = new Array<DancerName>(16).fill({ name: '' });
+        let quarter = new Array<DancerName>(8).fill({ name: '' });
+        let semi = new Array<DancerName>(4).fill({ name: '' });
+        let final = new Array<DancerName>(2).fill({ name: '' });
+        let winner = new Array<DancerName>(1).fill({ name: '' });
         if (rows) {
             rows.forEach((row, i) => {
                 if (i === 0) {
@@ -61,25 +61,25 @@ export const getBattle = async (): Promise<Battle> => {
                 }
                 const dn: DancerName = { name: row[0] };
                 if (i <= 1) {
-                    winner.push(dn);
+                    winner[i - 1] = dn;
                 }
                 if (i <= 2) {
-                    final.push(dn);
+                    final[i - 1] = dn;
                 }
                 if (i <= 4) {
-                    semi.push(dn);
+                    semi[i - 1] = dn;
                 }
                 if (i <= 8) {
-                    quarter.push(dn);
+                    quarter[i - 1] = dn;
                 }
                 if (i <= 16) {
-                    third.push(dn);
+                    third[i - 1] = dn;
                 }
                 if (i <= 32) {
-                    second.push(dn);
+                    second[i - 1] = dn;
                 }
                 if (i <= 64) {
-                    first.push(dn);
+                    first[i - 1] = dn;
                 }
             });
             return {
