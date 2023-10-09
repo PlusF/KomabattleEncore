@@ -55,8 +55,8 @@ const nameStyle = {
 
 const descriptionStyle = {
     fontSize: {
-        base: '0.2rem',
-        md: '0.3rem'
+        base: '0.5rem',
+        md: '0.6rem'
     },
     textAlign: 'center',
 }
