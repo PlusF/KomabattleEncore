@@ -75,7 +75,7 @@ function Judges() {
     const judges: Judge[] = [
         {
             name: '軍犬ZERO',
-            src: 'tmp.jpg',
+            src: 'judge1.jpg',
             description: 'Mighty Beat Bation/Free Front'
         },
         {
@@ -85,7 +85,7 @@ function Judges() {
         },
         {
             name: 'Amazon',
-            src: 'tmp.jpg',
+            src: 'judge3.jpg',
             description: 'LunaticK/Occhi Union'
         }
     ]
