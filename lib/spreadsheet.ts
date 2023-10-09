@@ -59,27 +59,26 @@ export const getBattle = async (): Promise<Battle> => {
                 if (i === 0) {
                     return;
                 }
-                const dn: DancerName = { name: row[0] };
                 if (i <= 1) {
-                    winner[i - 1] = dn;
+                    winner[i - 1] = { name: row[6] };
                 }
                 if (i <= 2) {
-                    final[i - 1] = dn;
+                    final[i - 1] = { name: row[5] };
                 }
                 if (i <= 4) {
-                    semi[i - 1] = dn;
+                    semi[i - 1] = { name: row[4] };
                 }
                 if (i <= 8) {
-                    quarter[i - 1] = dn;
+                    quarter[i - 1] = { name: row[3] };
                 }
                 if (i <= 16) {
-                    third[i - 1] = dn;
+                    third[i - 1] = { name: row[2] };
                 }
                 if (i <= 32) {
-                    second[i - 1] = dn;
+                    second[i - 1] = { name: row[1] };
                 }
                 if (i <= 64) {
-                    first[i - 1] = dn;
+                    first[i - 1] = { name: row[0] };
                 }
             });
             return {
