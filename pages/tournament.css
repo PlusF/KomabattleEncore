@@ -1,6 +1,7 @@
 #tournament-scroll {
     width: 100vw; 
     overflow-x: scroll;
+    padding: 0 30px;
 }
 
 #tournament-container-1 { 
