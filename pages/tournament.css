@@ -5,16 +5,14 @@
 
 #tournament-container-1 { 
     width: 600px; 
-    margin: 50px;
     height: 4200px; 
-    float: left; 
+    margin: 0 auto;
 }
 
 #tournament-container-2 { 
     width: 600px; 
-    margin: 50px;
     height: auto; 
-    float: left; 
+    margin: 0 auto;
 }
 
 .tournament-round { 
