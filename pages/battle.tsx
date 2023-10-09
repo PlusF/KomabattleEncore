@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react';
 import { getBattle } from '../lib/spreadsheet';
-import { Battle } from '../lib/dancer';
+import { Battle as Battles } from '../lib/dancer';
 import { Heading } from '@chakra-ui/react';
 import { StyledButton } from '../components/styledbutton';
 import { First2third } from '../components/first2third';
@@ -18,7 +18,7 @@ function Buttons({ setState }: { setState: (state: number) => void }) {
 }
 
 
-export default function Battle({ battle }: { battle: Battle }) {
+export default function Battle({ battle }: { battle: Battles }) {
     const [state, setState] = React.useState(0);
     // 0: Home
     // 1: first round ~ third round
@@ -36,7 +36,7 @@ export default function Battle({ battle }: { battle: Battle }) {
 export async function getStaticProps() {
     const battle = await getBattle();
     return {
-        props: battle? { battle } : {},
+        props: battle ? { battle } : null,
         revalidate: 10,
     };
 }
