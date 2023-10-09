@@ -96,12 +96,12 @@ export const getBattle = async (): Promise<Battle> => {
         console.error(err);
     }
     return {
-        first: [],
-        second: [],
-        third: [],
-        quarter: [],
-        semi: [],
-        final: [],
+        first: null,
+        second: null,
+        third: null,
+        quarter: null,
+        semi: null,
+        final: null,
         winner: [{name: '???'}],
     };
 };
