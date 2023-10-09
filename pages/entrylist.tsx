@@ -7,6 +7,7 @@ import {
     Text,
 } from '@chakra-ui/react';
 import { EntryCard } from '../components/entrycard';
+import Link from 'next/link';
 
 const textStyle = {
     fontSize: {
@@ -31,6 +32,7 @@ export default function EntryList({ dancers }: { dancers: Dancer[] }) {
                     </HStack>
                 ))}
             </Container>
+            <Link href="/">&larr; Go Back</Link>
         </>
     );
 }

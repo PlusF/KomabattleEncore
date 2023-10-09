@@ -1,6 +1,19 @@
-#tournament-container { 
-    width: 800px; 
-    height: 600px; 
+#tournament-scroll {
+    width: 100vw; 
+    overflow-x: scroll;
+}
+
+#tournament-container-1 { 
+    width: 600px; 
+    margin: 50px;
+    height: 4200px; 
+    float: left; 
+}
+
+#tournament-container-2 { 
+    width: 600px; 
+    margin: 50px;
+    height: auto; 
     float: left; 
 }
 
@@ -15,8 +28,17 @@
     height: 40px; 
     border: 1px solid #000; 
     margin: 10px 0; 
-    background: #73789F; 
+    background: #000; 
     color: white; 
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    padding: 10px 10px 10px 20px;
+}
+
+.arrow {
+    width: 150px;
+    height: 40px;
+    margin: 10px 0;
     padding: 10px 10px 10px 20px;
 }
 
@@ -50,24 +72,24 @@
 
 .line div { 
     border-top: 1px solid #000; 
-    margin: 133px 0 0 1px; 
+    margin: 129px 0 0 1px; 
 }
 
 .line div:first-child { 
     margin-top: 55px; 
 }
 
-#quarterFinals > div { 
-    margin-top: 93px; 
+#secondRound > div { 
+    margin-top: 90px; 
 }
 
-#quarterFinals > div:first-child { 
+#secondRound > div:first-child { 
     margin-top: 37px; 
 }
 
 #conn2 div { 
-    margin-top: 133px; 
-    height: 133px;
+    margin-top: 130px; 
+    height: 130px;
 }
 
 #conn2 div:first-child { 
@@ -75,27 +97,43 @@
 }
 
 #line2 div { 
-    margin-top: 270px; 
+    margin-top: 259px; 
 }
 
 #line2 div:first-child { 
     margin-top: 125px; 
 }
-#semiFinals > div { 
-    margin-top: 230px; 
+
+#thirdRound > div { 
+    margin-top: 220px; 
 }
-#semiFinals > div:first-child { 
+
+#thirdRound > div:first-child { 
     margin-top: 105px; 
 }
+
 #conn3 div { 
-    margin-top: 125px; 
-    height: 270px;
+    margin-top: 260px; 
+    height: 260px;
+}
+
+#conn3 div:first-child { 
+    margin-top: 124px; 
+    height: 260px;
 }
 
 #line3 div { 
-    margin-top: 270px; 
+    margin-top: 520px; 
 }
 
-#final > div { 
-    margin-top: 250px; 
+#line3 div:first-child { 
+    margin-top: 260px; 
+}
+
+#fourthRound > div { 
+    margin-top: 481px; 
+}
+
+#fourthRound > div:first-child { 
+    margin-top: 240px; 
 }
