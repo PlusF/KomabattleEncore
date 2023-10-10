@@ -56,7 +56,7 @@ const nameStyle = {
 const descriptionStyle = {
     fontSize: {
         base: '0.5rem',
-        md: '0.8rem'
+        md: '0.6rem'
     },
     textAlign: 'center',
 }
@@ -74,18 +74,18 @@ function JudgeCard(props: { judge: Judge }) {
 function Judges() {
     const judges: Judge[] = [
         {
-            name: '軍犬Z',
-            src: 'tmp.jpg',
+            name: '軍犬ZERO',
+            src: 'judge1.jpg',
             description: 'Mighty Beat Bation/Free Front'
         },
         {
             name: 'shishiyo is green',
             src: 'judge2.jpg',
-            description: ''
+            description: 'お誕生日研究会'
         },
         {
             name: 'Amazon',
-            src: 'tmp.jpg',
+            src: 'judge3.jpg',
             description: 'LunaticK/Occhi Union'
         }
     ]

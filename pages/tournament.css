@@ -1,0 +1,138 @@
+#tournament-scroll {
+    width: 100vw; 
+    overflow-x: scroll;
+    padding: 0 30px;
+}
+
+#tournament-container-1 { 
+    width: 600px; 
+    height: 4200px; 
+    margin: 0 auto;
+}
+
+#tournament-container-2 { 
+    width: 600px; 
+    height: auto; 
+    margin: 0 auto;
+}
+
+.tournament-round { 
+    width: 100px; 
+    height: 520px; 
+    float: left; 
+}
+
+.player-box { 
+    width: 100px; 
+    height: 40px; 
+    border: 1px solid #000; 
+    margin: 10px 0; 
+    background: #000; 
+    color: white; 
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    padding: 10px 10px 10px 20px;
+}
+
+.arrow {
+    width: 150px;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px 10px 10px 20px;
+}
+
+.tournament-round > div:nth-child(2n) { 
+    margin-bottom: 40px;
+}
+
+.connecter { 
+    width: 30px; 
+    height: 520px; 
+    float: left; 
+}
+
+.line { 
+    width: 30px; 
+    height: 520px; 
+    float: left; 
+}
+
+.connecter div { 
+    border: 1px solid #000; 
+    border-left: none; 
+    height: 50px; 
+    width: 100%; 
+    margin: 80px 0 0 1px;
+}
+
+.connecter div:first-child { 
+    margin: 32px 0 0 1px; 
+}
+
+.line div { 
+    border-top: 1px solid #000; 
+    margin: 129px 0 0 1px; 
+}
+
+.line div:first-child { 
+    margin-top: 55px; 
+}
+
+#secondRound > div { 
+    margin-top: 90px; 
+}
+
+#secondRound > div:first-child { 
+    margin-top: 37px; 
+}
+
+#conn2 div { 
+    margin-top: 130px; 
+    height: 130px;
+}
+
+#conn2 div:first-child { 
+    margin-top: 57px; 
+}
+
+#line2 div { 
+    margin-top: 259px; 
+}
+
+#line2 div:first-child { 
+    margin-top: 125px; 
+}
+
+#thirdRound > div { 
+    margin-top: 220px; 
+}
+
+#thirdRound > div:first-child { 
+    margin-top: 105px; 
+}
+
+#conn3 div { 
+    margin-top: 260px; 
+    height: 260px;
+}
+
+#conn3 div:first-child { 
+    margin-top: 124px; 
+    height: 260px;
+}
+
+#line3 div { 
+    margin-top: 520px; 
+}
+
+#line3 div:first-child { 
+    margin-top: 260px; 
+}
+
+#fourthRound > div { 
+    margin-top: 481px; 
+}
+
+#fourthRound > div:first-child { 
+    margin-top: 240px; 
+}

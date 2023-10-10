@@ -9,6 +9,8 @@ import '@fontsource/noto-sans-jp'
 import '@fontsource/zen-kaku-gothic-antique'
 import '@fontsource/zen-old-mincho'
 
+import './tournament.css'; // CSSファイルのインポート
+
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider theme={theme}>

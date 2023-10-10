@@ -13,10 +13,10 @@ function Detail() {
     return (
         <VStack sx={vstackStyle}>
             <Text>
-                12/16 16:30 ~ 20:30
+                12/16 16:30 ~ 20:30 (暫定)
             </Text>
             <Text>
-                ノア学芸大学スタジオ 7st
+                ノア学芸大学スタジオ
             </Text>
             <Text>
                 1on1 フルトーナメント

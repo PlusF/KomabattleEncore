@@ -30,6 +30,7 @@ return (
     <Box>
         <LinkCard href='https://docs.google.com/forms/d/e/1FAIpQLSf5foCcm52s-XhBe-ll9ExVveJhrYQ7BSl23RDWt9EXt4hrnA/viewform?usp=sharing' name='Entry' isExternal />
         <LinkCard href='/entrylist' name='Entry List' />
+        <LinkCard href="/timetable" name="Time Table" />
         <LinkCard href="/battle" name="Tournament" />
     </Box>
     </>

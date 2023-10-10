@@ -1,23 +1,42 @@
 import Link from 'next/link'
 import React from 'react';
-import { getContents } from '../lib/spreadsheet';
-import { Dancer } from '../lib/dancer';
-import { Heading, Text } from '@chakra-ui/react';
+import { getBattle } from '../lib/spreadsheet';
+import { Battle as Battles } from '../lib/dancer';
+import { Heading } from '@chakra-ui/react';
+import { StyledButton } from '../components/styledbutton';
+import { First2third } from '../components/first2third';
+import { Quarter2final } from '../components/quarter2final';
 
-export default function Battle({ dancers }: { dancers: Dancer[] }) {
+function Buttons({ setState }: { setState: (state: number) => void }) {
     return (
         <>
-        <Heading>Battle</Heading>
-        <Text>Coming soon...</Text>
+        <StyledButton onClick={() => setState(1)}>1st~ 3rd Round</StyledButton>
+        <StyledButton onClick={() => setState(2)}>Quarter Finals ~ Final</StyledButton>
         <Link href="/">&larr; Go Back</Link>
         </>
     )
 }
 
+
+export default function Battle({ battle }: { battle: Battles }) {
+    const [state, setState] = React.useState(0);
+    // 0: Home
+    // 1: first round ~ third round
+    // 2: quarter finals ~ final
+    return (
+        <>
+        <Heading>Battle</Heading>
+        { state === 0 && <Buttons setState={setState} /> }
+        { state === 1 && <First2third battle={battle} setState={setState} /> }
+        { state === 2 && <Quarter2final battle={battle} setState={setState} /> }
+        </>
+    )
+}
+
 export async function getStaticProps() {
-    const dancers = await getContents();
+    const battle = await getBattle();
     return {
-        props: { dancers },
-        revalidate: 3600,
+        props: battle ? { battle } : null,
+        revalidate: 10,
     };
 }
