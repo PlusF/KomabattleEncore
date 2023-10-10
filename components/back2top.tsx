@@ -20,7 +20,7 @@ function Back2Top() {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            if (currentScrollY > 300) {
+            if (currentScrollY > 400) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -43,13 +43,14 @@ function Back2Top() {
 
     return (
         <IconButton
-            className={`back2top ${isVisible ? 'visible' : ''}`}
-            onClick={scrollToTop}
-            icon={<FaChevronUp />}
-            aria-label="Back to top"
-            sx={style}
-            colorScheme='gray'
-        />
+                className={`back2top ${isVisible ? 'visible' : ''}`}
+                onClick={scrollToTop}
+                icon={<FaChevronUp />}
+                aria-label="Back to top"
+                sx={style}
+                colorScheme='gray'
+                display={ isVisible ? 'flex' : 'none'}
+            />
     );
 };
 

@@ -80,7 +80,7 @@ const Tournament = ({ battle }: { battle: Battle }) => {
                 <section className='tournament-round' id="fourthRound">
                     {tmp32.slice(0,8).map((i) => {
                         return (
-                            <div className='arrow'>&rarr; Quarter Finals</div>
+                            <div className='arrow' key={i}>&rarr; Quarter Finals</div>
                     )})}
                 </section>
                 
