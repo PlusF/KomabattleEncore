@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/react';
 
-const style = {
+const buttonStyle = {
     background: '#ffffff', 
     color: '#000000',
     boxShadow: '0px 1px 3px 0px rgba(0, 0, 0, 0.1)',
@@ -27,7 +27,7 @@ const style = {
 function StyledButton(props) {
     return (
         <Button
-            sx={style}
+            sx={buttonStyle}
             {...props}
         >
             {props.children}

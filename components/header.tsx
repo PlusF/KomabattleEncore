@@ -16,7 +16,7 @@ const logoStyle = {
     padding: '1.5rem',
 }
 
-function Header() {
+export default function Header() {
     return (
         <Box sx={boxStyle}>
             <Link href='/'>
@@ -25,5 +25,3 @@ function Header() {
         </Box>
     )
 }
-
-export { Header }
