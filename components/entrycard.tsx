@@ -15,11 +15,26 @@ const cardStyle = {
         base: '0.6rem',
         md: '1rem'
     },
-    backgroundColor: '#222',
-    color: '#fff',
     padding: {
         base: '0.4rem',
         md: '0.8rem',
+    }
+}
+
+function getCardStyle(canceled: boolean) {
+    console.log('getcardstyle')
+    if (canceled) {
+        return {
+            ...cardStyle,
+            backgroundColor: '#333',
+            color: '#ccc',
+        }
+    } else {
+        return{
+            ...cardStyle,
+            backgroundColor: '#222',
+            color: '#fff',
+        }
     }
 }
 
@@ -71,7 +86,7 @@ const cardBodyTextStyle = {
 
 function EntryCard({dancer}: {dancer: Dancer}) {
     return (
-        <Card sx={cardStyle}>
+        <Card sx={getCardStyle(dancer.canceled)}>
             {dancer.canceled ? <Canceled /> : <></>}
             <HStack>
                 <CardHeader sx={cardHeaderStyle}>
