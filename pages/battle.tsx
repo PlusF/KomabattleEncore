@@ -4,6 +4,7 @@ import { getBattle } from '../lib/spreadsheet';
 import { Battle as Battles } from '../lib/dancer';
 import { Heading } from '@chakra-ui/react';
 import { StyledButton } from '../components/styledbutton';
+import { First2second } from '../components/first2second';
 import { First2third } from '../components/first2third';
 import { Quarter2final } from '../components/quarter2final';
 
@@ -27,7 +28,8 @@ export default function Battle({ battle }: { battle: Battles }) {
         <>
         <Heading>Battle</Heading>
         { state === 0 && <Buttons setState={setState} /> }
-        { state === 1 && <First2third battle={battle} setState={setState} /> }
+        { battle.mode === 32 && state === 1 && <First2second battle={battle} setState={setState} /> }
+        { battle.mode === 64 && state === 1 && <First2third battle={battle} setState={setState} /> }
         { state === 2 && <Quarter2final battle={battle} setState={setState} /> }
         </>
     )

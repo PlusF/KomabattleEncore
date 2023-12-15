@@ -54,6 +54,7 @@ export const getBattle = async (): Promise<Battle> => {
             range: 'battle',
         });
         const rows = response.data.values;
+        const mode = rows ? Number(rows[1][7]) : 64;
         if (rows) {
             rows.forEach((row, i) => {
                 if (i === 0) {
@@ -82,6 +83,7 @@ export const getBattle = async (): Promise<Battle> => {
                 }
             });
             return {
+                mode: mode,
                 first: first,
                 second: second,
                 third: third,
@@ -95,6 +97,7 @@ export const getBattle = async (): Promise<Battle> => {
         console.error(err);
     }
     return {
+        mode: 64,
         first: first,
         second: second,
         third: third,

@@ -12,6 +12,7 @@ export type DancerName = {
 }
 
 export type Battle = {
+    mode: number;
     first: DancerName[];
     second: DancerName[];
     third: DancerName[];
