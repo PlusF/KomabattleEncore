@@ -1,5 +1,5 @@
 import { GoogleApis, google } from 'googleapis';
-import { Dancer, Battle, DancerName } from './dancer';
+import { Dancer, Battle, DancerName, Content } from './dancer';
 
 const getSheets = () => {
     const googleapis = new GoogleApis();
@@ -106,4 +106,27 @@ export const getBattle = async (): Promise<Battle> => {
         final: final,
         winner: winner,
     };
+};
+
+export const getTimeTable = async (): Promise<Content[]> => {
+    try {
+        const sheets = getSheets();
+        const response = await sheets.spreadsheets.values.get({
+            spreadsheetId: process.env.SPREADSHEET_ID,
+            range: 'timetable',
+        });
+        const rows = response.data.values;
+        if (rows) {
+            return rows.slice(1).map((row): Content => {
+                return {
+                    time: row[0],
+                    name: row[1],
+                    description: row[2],
+                };
+            });
+        }
+    } catch (err) {
+        console.error(err);
+    }
+    return [];
 };

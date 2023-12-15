@@ -21,3 +21,9 @@ export type Battle = {
     final: DancerName[];
     winner: DancerName[];
 }
+
+export type Content = {
+    time: string;
+    name: string;
+    description: string;
+}
