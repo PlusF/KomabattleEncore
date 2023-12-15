@@ -30,18 +30,16 @@ const cardHeaderStyle = {
 const timeStyle = {
     fontFamily: theme.fonts.name,
     fontSize: {
-        base: '1rem',
-        md: '1.2rem',
+        base: '1.2rem',
+        md: '1.5rem',
     },
     fontWeight: '400',
-    padding: '0',
-    margin: '0',
 }
 
 const descriptionStyle = {
     fontSize: {
-        base: '0.5rem',
-        md: '0.8rem'
+        base: '0.8rem',
+        md: '1rem'
     },
     fontWeight: '200',
 }
@@ -52,12 +50,12 @@ const cardBodyStyle = {
 
 const cardBodyTextStyle = {
     fontSize: {
-        base: '0.8rem',
-        md: '1rem',
+        base: '1.2rem',
+        md: '1.5rem',
     },
     width: {
-        base: '6rem',
-        md: '8rem',
+        base: '10rem',
+        md: '12rem',
     }
 }
 

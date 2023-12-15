@@ -22,7 +22,6 @@ const cardStyle = {
 }
 
 function getCardStyle(canceled: boolean) {
-    console.log('getcardstyle')
     if (canceled) {
         return {
             ...cardStyle,
