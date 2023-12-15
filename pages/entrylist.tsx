@@ -27,7 +27,6 @@ export default function EntryList({ dancers }: { dancers: Dancer[] }) {
             <Container>
                 {dancers.map((dancer, i) => (
                     <HStack key={i}>
-                        <Text>{i}</Text>
                         <EntryCard dancer={dancer} />
                     </HStack>
                 ))}
