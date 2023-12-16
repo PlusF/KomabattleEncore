@@ -21,8 +21,11 @@ function Detail() {
             <Text>
                 1on1 フルトーナメント
             </Text>
-            <Text>
+            <Text decoration={"line-through"}>
                 エントリー ￥1,500 / 観戦 無料
+            </Text>
+            <Text>
+                エントリー ￥2,000 / 観戦 無料
             </Text>
         </VStack>
     )
